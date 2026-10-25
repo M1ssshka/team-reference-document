@@ -41,7 +41,19 @@
 == Segment Tree
 
 #raw(
-  read("data_structures/segmentTree.cpp"),
+  read("data_structures/segment_tree.cpp"),
+)
+
+== DSU
+
+#raw(
+  read("data_structures/dsu.cpp"),
+)
+
+== Sparse table
+
+#raw(
+  read("data_structures/sparse_table.cpp"),
 )
 
 #include "formulas.typ"
