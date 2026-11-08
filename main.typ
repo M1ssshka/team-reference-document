@@ -9,10 +9,9 @@
   header: context {
     set text(size: 9pt)
     let cur = counter(page).get().first()
-    let total = counter(page).final().first()
     grid(
       columns: (1fr, 1fr),
-      align(left)[Saratov SU (Martyanov, Slepov, Bragin)], align(right)[Page #cur of #total],
+      align(left)[Saratov SU (Bragin, Martyanov, Slepov)], align(right)[#cur],
     )
     line(length: 100%, stroke: 0.6pt)
   },
@@ -163,7 +162,7 @@
 == 2-SAT
 
 #raw(
-  read("graph_algorithms/2-sat.cpp"),
+  read("graph_algorithms/2_sat.cpp"),
 )
 
 == Flows
