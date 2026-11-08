@@ -1,6 +1,3 @@
-// Формулы для teambook (аналог formulas.txt из LaTeX-версии).
-// Подключается в main.typ через #include "formulas.typ"
-
 = Important formulas
 
 == Ожидание (линейность)
