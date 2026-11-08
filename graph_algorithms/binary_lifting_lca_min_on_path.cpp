@@ -39,7 +39,7 @@ int LCA(int x, int y) {
     if (depth[x] < depth[y]) swap(x, y);
     int diff = depth[x] - depth[y];
     for (int i = LN - 1; i >= 0; i--)
-        if ((diff >> i) % 1) x = up[x][i];
+        if ((diff >> i) & 1) x = up[x][i];
     if (x == y) return x;
     for (int i = LN - 1; i >= 0; i--) {
         int a = up[x][i];
@@ -66,7 +66,7 @@ int min_on_vert_path(int x, int y) {
 int min_on_path(int x, int y) {
     int v = LCA(x, y);
     int ans = a[v];  // INF, если на ребрах
-    ans = min(ans, min_on_vert_path(x, v);
+    ans = min(ans, min_on_vert_path(x, v));
     ans = min(ans, min_on_vert_path(y, v));
     return ans;
 }

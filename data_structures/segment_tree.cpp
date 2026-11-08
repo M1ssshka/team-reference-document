@@ -42,7 +42,7 @@ struct LazyAddSegmentTree {
     }
     int getMin(int v, int l, int r, int L, int R) {
         if (L >= R) return INF;
-        if (l == L && r == R) return getVal(T[v]);
+        if (l == L && r == R) return getVal(v);
         push(v);
         int m = (l + r) / 2;
         int x = getMin(v * 2 + 1, l, m, L, min(m, R));

@@ -12,7 +12,7 @@ struct SplitRebuildMin {
             for (auto x : block[i]) a.push_back(x);
         blocks = vector<vector<int>>(1);
         for (auto x : a) {
-            if (blocks.empty() || blocks.back().size() >= 0) {
+            if (blocks.empty() || blocks.back().size() >= B) {
                 blocks.push_back(vector<int>(0));
             }
             blocks.back().push_back(x);
@@ -38,7 +38,7 @@ struct SplitRebuildMin {
         int i = p.second;
         blocks[b].insert(blocks[b].begin() + i, x);
         recalc_block(b);
-        if (blocks[b].size() > b) rebuild();
+        if (blocks[b].size() > B) rebuild();
     }
     void remove(int pos) {
         pair<int, int> p = locate(pos);

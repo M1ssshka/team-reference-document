@@ -7,7 +7,7 @@ struct SqrtDecompMin {
     void recalc_block(int x) {
         int l = x * B;
         int r = min(x * B + B, n);
-        f[x] = *min_element(a.begin() + l, a.end() + r);
+        f[x] = *min_element(a.begin() + l, a.begin() + r);
     }
     void upd(int x, long long y) {
         int b = x / B;
@@ -38,6 +38,6 @@ struct SqrtDecompMin {
         blocks = (n + B - 1) / B;
         this->a = a;
         f.resize(blocks);
-        for (int i = 0; i < n; i++) recalc_block(i);
+        for (int i = 0; i < blocks; i++) recalc_block(i);
     }
 };
